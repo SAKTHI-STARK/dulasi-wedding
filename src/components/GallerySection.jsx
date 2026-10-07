@@ -12,7 +12,7 @@ export default function GallerySection({ coverImage, coupleImage, heroImage }) {
     },
     {
       url: coupleImage || "/images/wedding_couple_portrait.png",
-      title: "Roopini & Suriya",
+      title: "Dulasiram & Kirupakari",
       desc: "Temple portrait in traditional silk attire"
     },
     {
