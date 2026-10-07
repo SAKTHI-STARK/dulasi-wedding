@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap');
+
+:root {
+  --bg-sandal: #F6F3ED;
+  --bg-card: #FAF8F5;
+  --text-primary: #3A2E28;
+  --text-secondary: #6B5B52;
+  --text-muted: #9E8C80;
+  --gold-accent: #C5A880;
+  --gold-muted: #D8C8B5;
+  --gold-gradient: linear-gradient(135deg, #B5956A 0%, #D8C4A5 50%, #A68456 100%);
+  --font-serif: 'Cinzel', 'Cormorant Garamond', serif;
+  --font-body: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+html, body {
+  background-color: var(--bg-sandal);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Custom Clean Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F6F3ED;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--gold-muted);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold-accent);
+}
+
+/* Typography Utility Classes */
+.font-serif-title {
+  font-family: var(--font-serif);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.font-serif-body {
+  font-family: var(--font-body);
+}
+
+.gold-text {
+  color: var(--gold-accent);
+}
+
+/* Subtle Gold Button */
+.btn-gold {
+  background: var(--text-primary);
+  color: #F6F3ED;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.75rem 2rem;
+  border-radius: 4px;
+  border: 1px solid var(--text-primary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.btn-gold:hover {
+  background: var(--gold-accent);
+  border-color: var(--gold-accent);
+  color: #FFFFFF;
+  transform: translateY(-1px);
+}
+
+.btn-outline-gold {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--gold-accent);
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.7rem 1.6rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.btn-outline-gold:hover {
+  background: var(--bg-card);
+  border-color: var(--text-primary);
+}
+
+/* Subtle Cards */
+.sandal-card {
+  background: var(--bg-card);
+  border: 1px solid var(--gold-muted);
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(58, 46, 40, 0.04);
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* Prevent double scrollbar on overlay */
+.no-scroll {
+  overflow: hidden !important;
+}
+
+/* 3D Realistic Box / Double-Door Middle Opening Animation */
+.box-perspective {
+  perspective: 1600px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+@keyframes splitOpenLeft {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+@keyframes splitOpenRight {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.box-door-left {
+  transform-origin: left center;
+}
+
+.box-door-right {
+  transform-origin: right center;
+}
+
+.box-animate-left {
+  animation: splitOpenLeft 1.2s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
+}
+
+.box-animate-right {
+  animation: splitOpenRight 1.2s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
+}
+
+/* Scroll-triggered Pop-Up Fade Animation */
+@keyframes scrollPopUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.scroll-pop-up {
+  animation: scrollPopUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Ultra-Realistic 3D Wing Flapping & Smooth Flying Flight Path */
+@keyframes leftWingFlap {
+  0% {
+    transform: rotateY(0deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateY(70deg) rotateZ(-10deg);
+  }
+}
+
+@keyframes rightWingFlap {
+  0% {
+    transform: rotateY(0deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateY(-70deg) rotateZ(10deg);
+  }
+}
+
+@keyframes flyPath1 {
+  0% {
+    transform: translate(0, 0) rotate(-15deg) scale(0.6);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.95;
+  }
+  25% {
+    transform: translate(12vw, -25vh) rotate(12deg) scale(0.9);
+  }
+  50% {
+    transform: translate(-8vw, -55vh) rotate(-18deg) scale(1.05);
+  }
+  75% {
+    transform: translate(15vw, -85vh) rotate(15deg) scale(0.85);
+  }
+  90% {
+    opacity: 0.95;
+  }
+  100% {
+    transform: translate(5vw, -115vh) rotate(-10deg) scale(0.5);
+    opacity: 0;
+  }
+}
+
+@keyframes flyPath2 {
+  0% {
+    transform: translate(0, 0) rotate(20deg) scale(0.5);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.95;
+  }
+  30% {
+    transform: translate(-15vw, -32vh) rotate(-14deg) scale(0.95);
+  }
+  60% {
+    transform: translate(10vw, -68vh) rotate(22deg) scale(1.1);
+  }
+  85% {
+    transform: translate(-5vw, -95vh) rotate(-12deg) scale(0.8);
+  }
+  90% {
+    opacity: 0.95;
+  }
+  100% {
+    transform: translate(-20vw, -120vh) rotate(15deg) scale(0.4);
+    opacity: 0;
+  }
+}
+
+@keyframes flyPath3 {
+  0% {
+    transform: translate(0, 0) rotate(-8deg) scale(0.7);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.95;
+    transform: translate(6vw, -20vh) rotate(10deg) scale(0.85);
+  }
+  45% {
+    transform: translate(-12vw, -50vh) rotate(-22deg) scale(1.0);
+  }
+  70% {
+    transform: translate(8vw, -80vh) rotate(18deg) scale(0.9);
+  }
+  90% {
+    opacity: 0.95;
+  }
+  100% {
+    transform: translate(-4vw, -118vh) rotate(-12deg) scale(0.5);
+    opacity: 0;
+  }
+}
+
+.animate-fly-path-1 {
+  animation: flyPath1 16s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+}
+
+.animate-fly-path-2 {
+  animation: flyPath2 18s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+}
+
+.animate-fly-path-3 {
+  animation: flyPath3 15s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+}
+
+/* Soundwave equalizer bars */
+@keyframes soundwave {
+  0%, 100% { height: 4px; }
+  50% { height: 18px; }
+}
+
+.bar-1 { animation: soundwave 1.2s ease-in-out infinite; }
+.bar-2 { animation: soundwave 0.8s ease-in-out infinite 0.2s; }
+.bar-3 { animation: soundwave 1.4s ease-in-out infinite 0.4s; }
+.bar-4 { animation: soundwave 0.9s ease-in-out infinite 0.1s; }
