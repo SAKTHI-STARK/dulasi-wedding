@@ -9,6 +9,7 @@ import { startWebAudioSynth, stopWebAudioSynth } from './utils/audioSynth';
 
 export default function App() {
   const [showOverlay, setShowOverlay] = useState(true);
+  const [hasEntered, setHasEntered] = useState(false);
 
   // Asset paths
   const coverImage = '/images/wedding_card_cover.png';
@@ -58,6 +59,7 @@ export default function App() {
 
   const handleEnterInvitation = () => {
     setShowOverlay(false);
+    setHasEntered(true);
     if (audioRef.current) {
       audioRef.current.play().then(() => {
         setIsAudioPlaying(true);
@@ -95,8 +97,8 @@ export default function App() {
         />
       )}
 
-      {/* Main Site Sections */}
-      <main className="flex-1">
+      {/* Main Site Sections with Grand Entrance Animation */}
+      <main className={`flex-1 transition-opacity duration-700 ${hasEntered ? 'animate-grand-entrance' : ''}`}>
         <Hero 
           heroImage={heroImage}
         />

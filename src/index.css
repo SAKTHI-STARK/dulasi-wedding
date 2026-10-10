@@ -313,3 +313,45 @@ html, body {
 .bar-2 { animation: soundwave 0.8s ease-in-out infinite 0.2s; }
 .bar-3 { animation: soundwave 1.4s ease-in-out infinite 0.4s; }
 .bar-4 { animation: soundwave 0.9s ease-in-out infinite 0.1s; }
+
+/* Grand Invitation Entrance Reveal Animations */
+@keyframes grandInvitationEntrance {
+  0% {
+    opacity: 0;
+    transform: translateY(28px) scale(0.98);
+    filter: blur(4px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+.animate-grand-entrance {
+  animation: grandInvitationEntrance 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes heroCardEntrance {
+  0% {
+    opacity: 0;
+    transform: translateY(24px) scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.hero-entrance-delay-1 {
+  animation: heroCardEntrance 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
+}
+
+.hero-entrance-delay-2 {
+  animation: heroCardEntrance 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.35s both;
+}
+
+.hero-entrance-delay-3 {
+  animation: heroCardEntrance 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.55s both;
+}
+

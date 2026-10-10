@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Sparkles } from 'lucide-react';
+import MalaiThoranam from './MalaiThoranam';
 
 export default function Hero({ heroImage }) {
   // Main Muhurtham Date & Time Target: 25 October 2026 07:30:00 AM
@@ -31,22 +32,15 @@ export default function Hero({ heroImage }) {
   }, []);
 
   return (
-    <section id="hero" className="pt-10 sm:pt-12 md:pt-16 pb-12 text-center relative bg-[#F6F3ED] overflow-hidden">
+    <section id="hero" className="pt-0 pb-12 text-center relative bg-[#F6F3ED] overflow-hidden">
       
-      {/* Top Subtle Gold Kolam Arch SVG Header */}
-      <div className="w-full max-w-4xl mx-auto px-4 mb-4 pt-2">
-        <svg viewBox="0 0 1000 100" className="w-full h-16 text-[#C5A880] opacity-80" fill="none" stroke="currentColor" strokeWidth="1.2">
-          <path d="M0 0 C 250 50, 750 50, 1000 0 M 100 0 C 350 70, 650 70, 900 0 M 200 0 C 400 80, 600 80, 800 0 M 350 0 C 450 65, 550 65, 650 0" />
-          <circle cx="500" cy="40" r="3.5" fill="currentColor" />
-          <circle cx="380" cy="30" r="2.5" fill="currentColor" />
-          <circle cx="620" cy="30" r="2.5" fill="currentColor" />
-        </svg>
-      </div>
+      {/* Traditional Festive Malai & Mango Leaf Thoranam Across Top */}
+      <MalaiThoranam />
 
       <div className="container mx-auto px-4">
         
         {/* Groom & Bride Info with Parents & Native Places */}
-        <div className="mb-6 space-y-4 max-w-2xl mx-auto">
+        <div className="mb-6 space-y-4 max-w-2xl mx-auto hero-entrance-delay-1">
           
           {/* Groom Card */}
           <div className="p-3.5 bg-[#FAF8F5] border border-[#E6DDD0] rounded shadow-xs">
@@ -81,7 +75,7 @@ export default function Hero({ heroImage }) {
         </div>
 
         {/* Hero Image Frame */}
-        <div className="max-w-2xl md:max-w-3xl mx-auto my-6 p-3 bg-[#FFFFFF] border border-[#E6DDD0] shadow-lg rounded-sm">
+        <div className="max-w-2xl md:max-w-3xl mx-auto my-6 p-3 bg-[#FFFFFF] border border-[#E6DDD0] shadow-lg rounded-sm hero-entrance-delay-2">
           <div className="aspect-[4/3] overflow-hidden">
             <picture>
               <source srcSet="/images/wedding_hero_banner_enhanced.webp" type="image/webp" />
@@ -98,7 +92,7 @@ export default function Hero({ heroImage }) {
         </div>
 
         {/* Save the Date & Single Clean Countdown Timer */}
-        <div className="max-w-xl mx-auto my-8 p-6 sandal-card">
+        <div className="max-w-xl mx-auto my-8 p-6 sandal-card hero-entrance-delay-3">
           
           <span className="text-xs font-serif-title font-bold tracking-[0.2em] text-[#C5A880] uppercase block mb-1">
             SAVE THE DATE

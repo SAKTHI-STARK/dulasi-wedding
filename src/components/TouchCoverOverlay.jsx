@@ -11,12 +11,31 @@ export default function TouchCoverOverlay({ coverImage, onEnterInvitation }) {
     setIsOpening(true);
 
     try {
+      // 1. Initial vibrant wedding confetti burst
       confetti({
-        particleCount: 90,
-        spread: 100,
+        particleCount: 70,
+        spread: 90,
         origin: { y: 0.5 },
-        colors: ['#C5A880', '#D8C8B5', '#3A2E28']
+        colors: ['#D4AF37', '#FFDF73', '#E63946', '#FFA500', '#F6F3ED']
       });
+
+      // 2. Cascading celebratory pushpa vrishti (flower shower) from top corners
+      setTimeout(() => {
+        confetti({
+          particleCount: 50,
+          angle: 60,
+          spread: 65,
+          origin: { x: 0.05, y: 0.2 },
+          colors: ['#E63946', '#D4AF37', '#FFA500', '#FFFDF0']
+        });
+        confetti({
+          particleCount: 50,
+          angle: 120,
+          spread: 65,
+          origin: { x: 0.95, y: 0.2 },
+          colors: ['#E63946', '#D4AF37', '#FFA500', '#FFFDF0']
+        });
+      }, 350);
     } catch (err) {}
 
     setTimeout(() => {
