@@ -15,7 +15,7 @@ export default function EventTimeline() {
       subtitle: "Traditional Groom Procession",
       date: 'Saturday, 24 October 2026',
       location: 'G.V. Thirumana Mahal, Kachirayapalayam',
-      image: '/images/event_haldi.png',
+      image: '/images/event_haldi.jpg',
       icon: <Sun className="w-5 h-5 text-[#C5A880]" />,
       side: 'left'
     },
@@ -26,7 +26,7 @@ export default function EventTimeline() {
       subtitle: 'Formal Agreement & Ring Exchange',
       date: 'Saturday, 24 October 2026',
       location: 'G.V. Thirumana Mahal Hall',
-      image: '/images/event_mehendi.png',
+      image: '/images/event_mehendi.jpg',
       icon: <Award className="w-5 h-5 text-[#C5A880]" />,
       side: 'right'
     },
@@ -48,7 +48,7 @@ export default function EventTimeline() {
       subtitle: 'Vedic Chanting & Morning Homam',
       date: 'Sunday Morning, 25 October 2026',
       location: 'G.V. Thirumana Mahal Mandapam',
-      image: '/images/event_muhurtham.png',
+      image: '/images/event_muhurtham.jpg',
       icon: <Sparkles className="w-5 h-5 text-[#C5A880]" />,
       side: 'right'
     },
@@ -59,7 +59,7 @@ export default function EventTimeline() {
       subtitle: 'Sacred Thali Kettu Vows',
       date: 'Sunday, 25 October 2026',
       location: 'G.V. Thirumana Mahal, Kachirayapalayam',
-      image: '/images/wedding_couple_portrait.png',
+      image: '/images/wedding_couple_portrait.jpg',
       icon: <Heart className="w-5 h-5 text-[#C5A880] fill-[#C5A880]" />,
       side: 'left',
       highlight: true

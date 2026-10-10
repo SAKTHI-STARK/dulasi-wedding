@@ -81,13 +81,19 @@ export default function Hero({ heroImage }) {
         </div>
 
         {/* Hero Image Frame */}
-        <div className="max-w-3xl mx-auto my-6 p-3 bg-[#FFFFFF] border border-[#E6DDD0] shadow-lg rounded-sm">
-          <div className="aspect-[4/3] sm:aspect-[16/9] overflow-hidden">
-            <img 
-              src={heroImage || "/images/wedding_hero_banner.png"} 
-              alt="Dulasiram & Kirupakari Temple Photo" 
-              className="w-full h-full object-cover object-center"
-            />
+        <div className="max-w-2xl md:max-w-3xl mx-auto my-6 p-3 bg-[#FFFFFF] border border-[#E6DDD0] shadow-lg rounded-sm">
+          <div className="aspect-[4/3] overflow-hidden">
+            <picture>
+              <source srcSet="/images/wedding_hero_banner_enhanced.webp" type="image/webp" />
+              <img 
+                src={heroImage || "/images/wedding_hero_banner_enhanced.jpg"} 
+                alt="Dulasiram & Kirupakari Temple Photo" 
+                className="w-full h-full object-cover object-[center_20%] contrast-[1.02] brightness-[1.01]"
+                loading="eager"
+                fetchPriority="high"
+                decoding="async"
+              />
+            </picture>
           </div>
         </div>
 

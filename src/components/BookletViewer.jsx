@@ -106,7 +106,7 @@ export default function BookletViewer({ coverImage, coupleImage }) {
           <h3 className="font-serif-title text-xl font-normal text-[#3A2E28] tracking-widest mb-3">ROOPINI & SURIYA</h3>
 
           <div className="max-w-[240px] sm:max-w-[280px] p-2 bg-[#FFFFFF] border border-[#D8C8B5] shadow-sm mb-3">
-            <img src={coupleImage || "/images/wedding_couple_portrait.png"} alt="Couple Portrait" className="w-full h-auto object-cover" />
+            <img src={coupleImage || "/images/wedding_couple_portrait.jpg"} alt="Couple Portrait" className="w-full h-auto object-cover" />
           </div>
 
           <p className="font-serif-body italic text-xs text-[#6B5B52] max-w-xs">

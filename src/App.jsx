@@ -12,7 +12,7 @@ export default function App() {
 
   // Asset paths
   const coverImage = '/images/wedding_card_cover.png';
-  const heroImage = '/images/wedding_hero_banner.png';
+  const heroImage = '/images/wedding_hero_banner_enhanced.jpg';
   const audioSrc = '/audio/wedding_music.mp3';
 
   const [isAudioPlaying, setIsAudioPlaying] = useState(false);

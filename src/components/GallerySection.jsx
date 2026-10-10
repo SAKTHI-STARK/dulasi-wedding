@@ -11,12 +11,12 @@ export default function GallerySection({ coverImage, coupleImage, heroImage }) {
       desc: "Traditional sandal gold invitation card"
     },
     {
-      url: coupleImage || "/images/wedding_couple_portrait.png",
+      url: coupleImage || "/images/wedding_couple_portrait.jpg",
       title: "Dulasiram & Kirupakari",
       desc: "Temple portrait in traditional silk attire"
     },
     {
-      url: heroImage || "/images/wedding_hero_banner.png",
+      url: heroImage || "/images/wedding_hero_banner.jpg",
       title: "Wedding Venue",
       desc: "Majestic temple architecture backdrop"
     }
