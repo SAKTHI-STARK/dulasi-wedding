@@ -355,3 +355,72 @@ html, body {
   animation: heroCardEntrance 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.55s both;
 }
 
+/* Diya Lamp Flame Flicker & Glow */
+@keyframes flameFlicker {
+  0%, 100% {
+    transform: scale(1) rotate(-1deg);
+    opacity: 0.95;
+    filter: drop-shadow(0 0 8px rgba(255, 179, 0, 0.85));
+  }
+  25% {
+    transform: scale(1.08, 0.95) rotate(1.5deg);
+    opacity: 1;
+    filter: drop-shadow(0 0 13px rgba(255, 152, 0, 0.95));
+  }
+  50% {
+    transform: scale(0.96, 1.05) rotate(-1.5deg);
+    opacity: 0.9;
+    filter: drop-shadow(0 0 7px rgba(255, 193, 7, 0.75));
+  }
+  75% {
+    transform: scale(1.04, 0.98) rotate(1deg);
+    opacity: 0.98;
+    filter: drop-shadow(0 0 11px rgba(255, 167, 38, 0.9));
+  }
+}
+
+.animate-flame-flicker {
+  animation: flameFlicker 1.8s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+/* Gentle Floating Petals & Gold Dust for Landing Page */
+@keyframes petalDrift {
+  0% {
+    transform: translateY(-20px) translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.85;
+  }
+  85% {
+    opacity: 0.85;
+  }
+  100% {
+    transform: translateY(105vh) translateX(50px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.petal-drift-1 { animation: petalDrift 11s ease-in-out infinite 0s; }
+.petal-drift-2 { animation: petalDrift 14s ease-in-out infinite 2s; }
+.petal-drift-3 { animation: petalDrift 12s ease-in-out infinite 5s; }
+.petal-drift-4 { animation: petalDrift 15s ease-in-out infinite 1s; }
+.petal-drift-5 { animation: petalDrift 13s ease-in-out infinite 7s; }
+.petal-drift-6 { animation: petalDrift 16s ease-in-out infinite 3.5s; }
+
+/* Gold Sheen Sweeping Animation */
+@keyframes goldShimmer {
+  0% {
+    transform: translateX(-150%) skewX(-20deg);
+  }
+  100% {
+    transform: translateX(250%) skewX(-20deg);
+  }
+}
+
+.animate-gold-shimmer {
+  animation: goldShimmer 3.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+
